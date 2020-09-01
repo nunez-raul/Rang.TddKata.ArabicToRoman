@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Rang.TddKata.ArabicToRoman.Logic
+﻿namespace Rang.TddKata.ArabicToRoman.Logic
 {
-    class ArabicToRomanConverter
+    public class ArabicToRomanConverter
     {
+        public string Convert(int number)
+        {
+            return "I";
+        }
     }
 }
