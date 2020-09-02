@@ -6,8 +6,10 @@ namespace Rang.TddKata.ArabicToRoman.Logic
     {
         public string Convert(int number)
         {
-            var sb = new StringBuilder();
+            if (number == 4)
+                return "IV";
 
+            var sb = new StringBuilder();
             for(int i = 0; i < number; i++)
             {
                 sb.Append("I");

@@ -43,5 +43,18 @@ namespace Rang.TddKata.ArabicToRoman.XUnitTests
             // assert
             Assert.True(result == "III");
         }
+
+        [Fact]
+        public void Convert4ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(4);
+
+            // assert
+            Assert.True(result == "IV");
+        }
     }
 }
