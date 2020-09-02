@@ -1,12 +1,19 @@
-﻿namespace Rang.TddKata.ArabicToRoman.Logic
+﻿using System.Text;
+
+namespace Rang.TddKata.ArabicToRoman.Logic
 {
     public class ArabicToRomanConverter
     {
         public string Convert(int number)
         {
-            if (number == 2)
-                return "II";
-            return "I";
+            var sb = new StringBuilder();
+
+            for(int i = 0; i < number; i++)
+            {
+                sb.Append("I");
+            }
+            
+            return sb.ToString();
         }
     }
 }
