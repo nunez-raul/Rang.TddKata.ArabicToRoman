@@ -6,6 +6,9 @@ namespace Rang.TddKata.ArabicToRoman.Logic
     {
         public string Convert(int number)
         {
+            if (number == 6)
+                return "VI";
+
             if (number == 5)
                 return "V";
 
