@@ -8,10 +8,13 @@ namespace Rang.TddKata.ArabicToRoman.Logic
         {
             var sb = new StringBuilder();
 
-            if (number >= 5)
+            if (number == 9)
+                return "IX";
+
+            if(number >= 5)
                 return sb.Append("V").Append(Convert(number - 5)).ToString();
 
-            if (number == 4)
+            if(number == 4)
                 return "IV";
 
             for(int i = 0; i < number; i++)
