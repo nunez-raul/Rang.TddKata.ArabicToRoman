@@ -212,5 +212,122 @@ namespace Rang.TddKata.ArabicToRoman.XUnitTests
             // assert
             Assert.True(result == "XL");
         }
+
+        [Fact]
+        public void Convert49ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(49);
+
+            // assert
+            Assert.True(result == "XLIX");
+        }
+
+        [Fact]
+        public void Convert50ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(50);
+
+            // assert
+            Assert.True(result == "L");
+        }
+
+        [Fact]
+        public void Convert90ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(90);
+
+            // assert
+            Assert.True(result == "XC");
+        }
+
+        [Fact]
+        public void Convert100ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(100);
+
+            // assert
+            Assert.True(result == "C");
+        }
+
+        [Fact]
+        public void Convert400ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(400);
+
+            // assert
+            Assert.True(result == "CD");
+        }
+
+        [Fact]
+        public void Convert500ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(500);
+
+            // assert
+            Assert.True(result == "D");
+        }
+
+        [Fact]
+        public void Convert900ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(900);
+
+            // assert
+            Assert.True(result == "CM");
+        }
+
+        [Fact]
+        public void Convert1000ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(1000);
+
+            // assert
+            Assert.True(result == "M");
+        }
+
+        [Fact]
+        public void Convert4999ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(4999);
+
+            // assert
+            Assert.True(result == "MMMMCMXCIX");
+        }
     }
 }
