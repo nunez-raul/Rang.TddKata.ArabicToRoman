@@ -134,5 +134,83 @@ namespace Rang.TddKata.ArabicToRoman.XUnitTests
             // assert
             Assert.True(result == "X");
         }
+
+        [Fact]
+        public void Convert11ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(11);
+
+            // assert
+            Assert.True(result == "XI");
+        }
+
+        [Fact]
+        public void Convert12ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(12);
+
+            // assert
+            Assert.True(result == "XII");
+        }
+
+        [Fact]
+        public void Convert14ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(14);
+
+            // assert
+            Assert.True(result == "XIV");
+        }
+
+        [Fact]
+        public void Convert15ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(15);
+
+            // assert
+            Assert.True(result == "XV");
+        }
+
+        [Fact]
+        public void Convert20ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(20);
+
+            // assert
+            Assert.True(result == "XX");
+        }
+
+        [Fact]
+        public void Convert40ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(40);
+
+            // assert
+            Assert.True(result == "XL");
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace Rang.TddKata.ArabicToRoman.Logic
         //[X, IX, V, IV, I]
         private readonly Dictionary<int, string> valueSymbolMap = new Dictionary<int, string>
         {
+            {40, "XL"},
             {10, "X"},
             {9, "IX"},
             {5, "V"},
