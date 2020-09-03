@@ -1,28 +1,35 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
 
 namespace Rang.TddKata.ArabicToRoman.Logic
 {
     public class ArabicToRomanConverter
     {
+        //[10, 9, 5, 4, 1]
+        //[X, IX, V, IV, I]
+        private readonly Dictionary<int, string> valueSymbolMap = new Dictionary<int, string>
+        {
+            {10, "X"},
+            {9, "IX"},
+            {5, "V"},
+            {4, "IV"},
+            {1, "I"}
+        };
+
         public string Convert(int number)
         {
             var sb = new StringBuilder();
 
-            if (number == 9)
-                return "IX";
-
-            if(number >= 5)
-                return sb.Append("V").Append(Convert(number - 5)).ToString();
-
-            if(number == 4)
-                return "IV";
-
-            for(int i = 0; i < number; i++)
+            foreach (var key in valueSymbolMap.Keys)
             {
-                sb.Append("I");
+                if (number == key)
+                    return valueSymbolMap[key];
+
+                if (number > key)
+                    return sb.Append(valueSymbolMap[key]).Append(Convert(number - key)).ToString();
             }
-            
-            return sb.ToString();
+
+            return "";
         }
     }
 }

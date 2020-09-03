@@ -121,5 +121,18 @@ namespace Rang.TddKata.ArabicToRoman.XUnitTests
             // assert
             Assert.True(result == "IX");
         }
+
+        [Fact]
+        public void Convert10ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(10);
+
+            // assert
+            Assert.True(result == "X");
+        }
     }
 }
