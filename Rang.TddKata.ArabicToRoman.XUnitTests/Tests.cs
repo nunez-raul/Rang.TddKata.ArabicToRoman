@@ -329,5 +329,31 @@ namespace Rang.TddKata.ArabicToRoman.XUnitTests
             // assert
             Assert.True(result == "MMMMCMXCIX");
         }
+
+        [Fact]
+        public void Convert0ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(0);
+
+            // assert
+            Assert.True(result == "");
+        }
+
+        [Fact]
+        public void Convert5000ToRoman()
+        {
+            // arrange
+            var arabicToRomanConverter = new ArabicToRomanConverter();
+
+            // act
+            var result = arabicToRomanConverter.Convert(5000);
+
+            // assert
+            Assert.True(result == ArabicToRomanConverter.MaxLimitExceededMessage);
+        }
     }
 }

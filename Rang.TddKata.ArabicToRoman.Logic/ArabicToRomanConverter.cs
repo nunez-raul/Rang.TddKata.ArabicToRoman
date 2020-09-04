@@ -5,6 +5,7 @@ namespace Rang.TddKata.ArabicToRoman.Logic
 {
     public class ArabicToRomanConverter
     {
+        public const string MaxLimitExceededMessage = "Out of limits; peek a smaller number.";
         //[10, 9, 5, 4, 1]
         //[X, IX, V, IV, I]
         private readonly Dictionary<int, string> valueSymbolMap = new Dictionary<int, string>
@@ -26,6 +27,9 @@ namespace Rang.TddKata.ArabicToRoman.Logic
 
         public string Convert(int number)
         {
+            if (number > 4999)
+                return MaxLimitExceededMessage;
+
             var sb = new StringBuilder();
 
             foreach (var key in valueSymbolMap.Keys)
