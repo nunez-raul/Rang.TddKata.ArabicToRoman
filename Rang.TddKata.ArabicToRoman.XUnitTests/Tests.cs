@@ -318,16 +318,16 @@ namespace Rang.TddKata.ArabicToRoman.XUnitTests
         }
 
         [Fact]
-        public void Convert4999ToRoman()
+        public void Convert3999ToRoman()
         {
             // arrange
             var arabicToRomanConverter = new ArabicToRomanConverter();
 
             // act
-            var result = arabicToRomanConverter.Convert(4999);
+            var result = arabicToRomanConverter.Convert(3999);
 
             // assert
-            Assert.True(result == "MMMMCMXCIX");
+            Assert.True(result == "MMMCMXCIX");
         }
 
         [Fact]
@@ -344,13 +344,13 @@ namespace Rang.TddKata.ArabicToRoman.XUnitTests
         }
 
         [Fact]
-        public void Convert5000ToRoman()
+        public void Convert4000ToRoman()
         {
             // arrange
             var arabicToRomanConverter = new ArabicToRomanConverter();
 
             // act
-            var result = arabicToRomanConverter.Convert(5000);
+            var result = arabicToRomanConverter.Convert(4000);
 
             // assert
             Assert.True(result == ArabicToRomanConverter.MaxLimitExceededMessage);

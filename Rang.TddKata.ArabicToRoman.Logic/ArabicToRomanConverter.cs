@@ -27,7 +27,7 @@ namespace Rang.TddKata.ArabicToRoman.Logic
 
         public string Convert(int number)
         {
-            if (number > 4999)
+            if (number > 3999)
                 return MaxLimitExceededMessage;
 
             var sb = new StringBuilder();
